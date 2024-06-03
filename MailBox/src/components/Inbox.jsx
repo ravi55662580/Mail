@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { fetchMailsFromDatabase } from './Firebase';
-import Mailbox from './MailBox'; // Import the Mailbox component
+import Mailbox from './Mailbox'; // Import the Mailbox component
 
 const Inbox = () => {
   const [mails, setMails] = useState([]);
@@ -9,11 +9,11 @@ const Inbox = () => {
 
   useEffect(() => {
     const idToken = localStorage.getItem('idToken');
-    const userId = localStorage.getItem('userId');
+    const userId = localStorage.getItem('userEmail');
 
     const fetchMails = async () => {
       try {
-        const fetchedMails = await fetchMailsFromDatabase(idToken, userId, 'inbox');
+        const fetchedMails = await fetchMailsFromDatabase(idToken, userEmail);
         setMails(fetchedMails);
         setError('');
       } catch (error) {
