@@ -1,3 +1,59 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.inbox {
+    padding: 1rem;
+  }
+  
+  .mail-list {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .mail-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+  }
+  
+  .mail-item.unread {
+    font-weight: bold;
+  }
+  
+  .mail-item.read {
+    font-weight: normal;
+  }
+  
+  .blue-dot {
+    width: 10px;
+    height: 10px;
+    background-color: blue;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .mail-info {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .delete-button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .mail-details {
+    margin-top: 1rem;
+  }
+  
